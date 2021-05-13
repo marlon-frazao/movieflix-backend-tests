@@ -18,6 +18,7 @@ public class MovieDTO implements Serializable {
 	private String synopsis;
 	
 	private GenreDTO genre;
+	private Long genreId;
 	
 	List<ReviewDTO> reviews = new ArrayList<>();
 	
@@ -33,6 +34,7 @@ public class MovieDTO implements Serializable {
 		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
 		this.genre = genre;
+		genreId = genre.getId();
 	}
 	
 	public MovieDTO(Movie entity) {
@@ -43,6 +45,7 @@ public class MovieDTO implements Serializable {
 		imgUrl = entity.getImgUrl();
 		synopsis = entity.getSynopsis();
 		genre = entity.getGenre().toDto();
+		genreId = entity.getGenre().getId();
 	}
 	
 	public MovieDTO(Movie entity, List<Review> reviews) {
@@ -108,5 +111,13 @@ public class MovieDTO implements Serializable {
 
 	public List<ReviewDTO> getReviews() {
 		return reviews;
+	}
+
+	public Long getGenreId() {
+		return genreId;
+	}
+
+	public void setGenreId(Long genreId) {
+		this.genreId = genreId;
 	}
 }
