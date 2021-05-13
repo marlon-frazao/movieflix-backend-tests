@@ -1,11 +1,8 @@
 package com.devsuperior.movieflix.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.devsuperior.movieflix.entities.Genre;
-import com.devsuperior.movieflix.entities.Movie;
 
 public class GenreDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
