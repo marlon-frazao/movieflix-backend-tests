@@ -79,6 +79,6 @@ public class Genre implements Serializable {
 	}
 	
 	public GenreDTO toDto() {
-		return new GenreDTO(this, movies);
+		return new GenreDTO(this);
 	}
 }
