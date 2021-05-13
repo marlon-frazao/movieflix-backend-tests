@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.devsuperior.movieflix.dto.GenreDTO;
+
 @Entity
 @Table(name = "tb_genre")
 public class Genre implements Serializable {
@@ -74,5 +76,9 @@ public class Genre implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public GenreDTO toDto() {
+		return new GenreDTO(this, movies);
 	}
 }

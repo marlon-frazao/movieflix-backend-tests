@@ -14,6 +14,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.devsuperior.movieflix.dto.MovieDTO;
+
 @Entity
 @Table(name = "tb_movie")
 public class Movie implements Serializable {
@@ -133,5 +135,9 @@ public class Movie implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public MovieDTO toDto() {
+		return new MovieDTO(this, reviews);
 	}
 }

@@ -18,6 +18,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.devsuperior.movieflix.dto.UserDTO;
+
 @Entity
 @Table(name = "tb_user")
 public class User implements Serializable {
@@ -113,5 +115,9 @@ public class User implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public UserDTO toDto() {
+		return new UserDTO(this, roles, reviews);
 	}
 }

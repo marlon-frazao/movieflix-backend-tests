@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.devsuperior.movieflix.dto.RoleDTO;
+
 @Entity
 @Table(name = "tb_role")
 public class Role implements Serializable {
@@ -65,5 +67,9 @@ public class Role implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public RoleDTO toDto() {
+		return new RoleDTO(this);
 	}
 }

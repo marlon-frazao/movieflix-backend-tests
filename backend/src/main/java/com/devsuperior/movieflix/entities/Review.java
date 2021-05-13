@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.devsuperior.movieflix.dto.ReviewDTO;
+
 @Entity
 @Table(name = "tb_review")
 public class Review implements Serializable {
@@ -95,5 +97,9 @@ public class Review implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	
+	public ReviewDTO toDto() {
+		return new ReviewDTO(this);
 	}
 }
