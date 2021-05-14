@@ -124,7 +124,7 @@ public class User implements UserDetails, Serializable {
 	}
 	
 	public UserDTO toDto() {
-		return new UserDTO(this, roles, reviews);
+		return new UserDTO(this);
 	}
 	
 	@Override
@@ -155,5 +155,14 @@ public class User implements UserDetails, Serializable {
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+
+	public boolean hasHole(String authority) {
+		for(Role r : roles) {
+			if(r.getAuthority().equals(authority)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

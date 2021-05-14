@@ -138,6 +138,6 @@ public class Movie implements Serializable {
 	}
 	
 	public MovieDTO toDto() {
-		return new MovieDTO(this, reviews);
+		return new MovieDTO(this);
 	}
 }

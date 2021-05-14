@@ -1,10 +1,16 @@
 package com.devsuperior.movieflix.dto;
 
-import com.devsuperior.movieflix.entities.Review;
+import javax.validation.constraints.NotBlank;
 
+import com.devsuperior.movieflix.entities.Review;
+import com.devsuperior.movieflix.services.validation.ReviewInsertValid;
+
+@ReviewInsertValid
 public class ReviewDTO {
 
 	private Long id;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String text;
 	private Long movieId;
 	
