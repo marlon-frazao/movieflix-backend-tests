@@ -50,7 +50,7 @@ public class MovieDTO implements Serializable {
 	
 	public MovieDTO(Movie entity, List<Review> reviews) {
 		this(entity);
-		reviews.forEach(x -> this.reviews.add(x.toDto()));
+		reviews.forEach(x -> this.reviews.add(new ReviewDTO(x.getId(), x.getText(), x.getUser().toDto(), new MovieDTO())));
 	}
 
 	public Long getId() {

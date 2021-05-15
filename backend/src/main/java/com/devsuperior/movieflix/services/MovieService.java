@@ -31,6 +31,8 @@ public class MovieService {
 	
 	@Transactional(readOnly = true)
 	public MovieDTO findById(Long id) {
-		return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entity not found")).toDto();
+		Movie entity =  repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
+		
+		return new MovieDTO(entity, entity.getReviews());
 	}
 }
