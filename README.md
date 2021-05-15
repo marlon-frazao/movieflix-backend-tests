@@ -5,7 +5,7 @@
 
 Movieflix é uma aplicação full stack web e mobile construída durante o Bootcamp da [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
-A aplicação consiste em um catálogo de filmes o usuário pode encontrar filmes com seus títulos, sinopses, avaliações entre outros. Usuários cadastrados como membros podem inserir avaliações para os filmes
+A aplicação consiste em um catálogo de filmes o usuário pode encontrar filmes com seus títulos, sinopses, avaliações entre outros. Usuários cadastrados como membros podem inserir avaliações para os filmes.
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/marlon-frazao/movieflix-backend-tests/blob/main/assets/modelo-conceitual.PNG)
