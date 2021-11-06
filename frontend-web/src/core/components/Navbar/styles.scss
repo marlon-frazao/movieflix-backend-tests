@@ -1,0 +1,40 @@
+.main-nav {
+    height: 70px;
+    color: #000000;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-right: 140px;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo-text {
+    color: #000000;
+}
+
+.btn-sair {
+    height: 30px;
+    width: 100px;
+    padding: 4px 0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #000000;
+
+    &:hover {
+        color: #FFC700;
+        background-color: #000000;
+    }
+}
+
+.btn-text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
